@@ -1,17 +1,25 @@
-import fakeFilmList from '../data/short-film-list.js';
-import createDetailTemplate from '../src/film-detail-template/js';
+import createDetailTemplate from './film-detail-template.js';
 
 const detailsList = document.getElementById('film-details');
 const searchParams = new URLSearchParams(window.location.search);
-const selectedFilm = searchParams.get('id');
-let populateFilmDetail = null;
+const id = searchParams.get('id');
+const url = `https://ghibliapi.herokuapp.com/films/${id}`;
 
-for(let i = 0; i < fakeFilmList.length; i++) {
-    let currentFilm = fakeFilmList[i];
-    if(currentFilm.id === selectedFilm.id) {
-        populateFilmDetail = selectedFilm;
-    }
+if(!id) {
+    window.location = './';
 }
 
-const dom = createDetailTemplate(populateFilmDetail);
-detailsList.appendChild(dom);
+fetch(url)
+    .then(response => response.json())
+    .then(result => {
+        loadFilmDetail(result);
+    });
+
+function loadFilmDetail(film) {
+    const dom = createDetailTemplate(film);
+    detailsList.appendChild(dom);
+}
+
+
+// const dom = createDetailTemplate(populateFilmDetail);
+// detailsList.appendChild(dom);
