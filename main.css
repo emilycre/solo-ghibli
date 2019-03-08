@@ -2,6 +2,70 @@
     font-family: 'Karla', sans-serif;
 }
 
+body {
+    background-image: url(./assets/background.jpg);
+    background-repeat: repeat;
+    background-size: 250px 250px;
+}
+
+header {
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#film-header {
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+}
+
+#logo {
+    max-width: 200px;
+}
+
 ul {
     list-style: none;
+    padding: 0;
+    line-height: 1.5em;
 }
+
+#film-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#film-list {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0px 15px 0px;
+    width: 400px;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(52, 116, 49);
+  }
+  
+  a:visited {
+    color: rgb(240, 206, 164);
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
