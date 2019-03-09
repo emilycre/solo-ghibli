@@ -39,17 +39,17 @@ test('Template to populate with film details', assert => {
     //assert
     assert.htmlEqual(result, /*html*/`
     <dl>
-            <dt>Film Title</dt>
+            <dt>Film Title :</dt>
             <dd id="title">Castle In The Sky</dd>
-            <dt>Synopsis</dt>
+            <dt>Synopsis :</dt>
             <dd id="synopsis">The orphan Sheeta inherited a mysterious...</dd>
-            <dt>Director</dt>
+            <dt>Director :</dt>
             <dd id="director">Hayao Miyazaki</dd>
-            <dt>Producer</dt>
+            <dt>Producer :</dt>
             <dd id="producer">Isao Takahata</dd>
-            <dt>Release Date</dt>
+            <dt>Release Date :</dt>
             <dd id="release-date">1986</dd>
-            <dt>Rotten Tomato Score</dt>
+            <dt>Rotten Tomato Score :</dt>
             <dd id="rt-score">95</dd>
         </dl>
         `);

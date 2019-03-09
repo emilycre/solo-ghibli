@@ -19,7 +19,3 @@ function loadFilmDetail(film) {
     const dom = createDetailTemplate(film);
     detailsList.appendChild(dom);
 }
-
-
-// const dom = createDetailTemplate(populateFilmDetail);
-// detailsList.appendChild(dom);
